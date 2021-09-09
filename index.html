@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+    <header>
+        <h1>Тестовое задание</h1>
+    </header>
+    <main>
+        <table id="details-table">
+            <caption>Детали автомобиля</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Индекс</th>
+                    <th scope="col">Деталь</th>
+                    <th scope="col">Цена</th>
+                    <th scope="col">Количество</th>
+                    <th scope="col">Стоимость</th>
+                    <th scope="col">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Кузов</td>
+                    <td></td>
+                    <td>1</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>1.1</td>
+                    <td>Двери</td>
+                    <td></td>
+                    <td>3</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>1.1.1</td>
+                    <td>Замок</td>
+                    <td>5000</td>
+                    <td>4</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>1.1.2</td>
+                    <td>Ручки</td>
+                    <td>6000</td>
+                    <td>6</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Двигатель</td>
+                    <td></td>
+                    <td>1</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>2.1</td>
+                    <td>Поршни</td>
+                    <td>10000</td>
+                    <td>5</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+                <tr>
+                    <td>2.2</td>
+                    <td>Кольца</td>
+                    <td>2000</td>
+                    <td>3</td>
+                    <td></td>
+                    <td><button class="delete-btn" type="button">Удалить</button><button class="add-btn" type="button">Добавить</button></td>
+                </tr>
+            </tbody>
+            
+        </table>
+
+        <button class="export-btn" onclick="tableToExcel('Automobile-Details')">
+            Export table to Excel file
+        </button>
+
+
+        
+
+        <section class="add-detail-section">
+            <h2>Секция для добавления новой детали</h2>
+            <div>
+                <label for="new-or-child-detail">Выберите опцию:</label>
+                <select name="detail-option" id="new-or-child-detail">
+                    <option value="empty" selected></option>
+                    <option value="new-detail">Новая деталь</option>
+                    <option value="sub-detail">Поддеталь к существующей</option>
+                </select>
+            </div>
+
+            <div class="parent-element-select" hidden>
+                <label for="avail-parent-details">Выбрать родительскую деталь:</label>
+                <select name="parent-details" id="avail-parent-details">
+                    <option value="empty" selected disabled></option>
+                </select>
+            </div>
+            
+            <form class="add-detail-form" hidden>
+                <h3>Новая деталь</h3>
+                <label for="name-input">
+                    Имя:
+                </label>
+                <input type="text" id="name-input" required minlength="3">
+                <label for="price-input">
+                    Цена:
+                </label>
+                <input type="number" id="price-input" required value="100" min="100" step="100">
+                <label for="quantity-input">
+                    Количество:  
+                </label>
+                <input type="number" id="quantity-input" value="1" min="1">
+                <button class="add-new-detail-btn" type="submit">Добавить деталь</button>
+            </form>
+            
+        </section>
+        
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

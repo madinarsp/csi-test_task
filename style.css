@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+main {
+    margin: 20px 20px;
+}
+
+table {
+    table-layout: fixed;
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+thead th:nth-child(1),
+thead th:nth-child(3),
+thead th:nth-child(4),
+thead th:nth-child(5) {
+    width: 15%;
+}
+
+thead th:nth-child(2),
+thead th:nth-child(6) {
+    width: 20%;
+}
+
+td {
+    text-align: center;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1.5px solid rgba(0, 0, 0, 0.7);
+}
+
+tr td:first-child {
+    text-align: right;
+}
+
+tr td:last-child {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+th {
+    background-color: #a4c3f5;
+}
+
+table caption {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+button {
+    padding: 7px;
+    background-color: #9aa5b5;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: white;
+    background-color: #4776b5;
+}
+
+.add-detail-section {
+    height: fit-content;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.add-detail-section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: #aed6f1;
+    width: 25%;
+    padding: 10px 30px;
+}
+
+form input,
+form label {
+    display: block;
+}
+
+form input {
+    margin-top: 7px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+form h3 {
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+#new-or-child-detail,
+#avail-parent-details {
+    padding: 5px;
+    width: 20%;
+}
+
+.add-detail-section div {
+    margin-bottom: 20px;
+}
